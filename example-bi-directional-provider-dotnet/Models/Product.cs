@@ -1,10 +1,8 @@
-﻿using System;
-
-namespace Provider.Models
+﻿namespace Provider.Models
 {
     public class Product
     {
-        public Guid id { get; set; }
+        public int id { get; set; }
         public string type { get; set; }
         public string name { get; set; }
     }
