@@ -80,8 +80,8 @@
               }
             }
           },
-          "404": {
-            "description": "Not Found"
+          "204": {
+            "description": "Success"
           }
         }
       }

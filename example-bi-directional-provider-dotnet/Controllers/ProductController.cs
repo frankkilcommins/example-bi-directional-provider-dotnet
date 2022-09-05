@@ -28,14 +28,14 @@ namespace Provider.Controllers
         // GET /products/{id}
         [HttpGet("{id:int}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status404NotFound)]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
         public ActionResult<Product> GetProduct(int id)
         {
             var product = products.FirstOrDefault(product => product.id == id);
 
             if (product == null)
             {
-                return new NotFoundResult();
+                return new NoContentResult();
             }
 
             return product;
