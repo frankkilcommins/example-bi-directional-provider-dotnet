@@ -40,5 +40,19 @@ namespace Provider.Controllers
 
             return product;
         }
+
+        [HttpDelete("{int:id}")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public ActionResult DeleteProducts(int id)
+        {
+            var product = products.FirstOrDefault(product => product.id == id);
+
+            if(product != null)
+            {
+                products.Remove(product);
+            }
+
+            return new NoContentResult();
+        }
     }
 }

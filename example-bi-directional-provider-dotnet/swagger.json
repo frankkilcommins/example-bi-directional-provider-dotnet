@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.1",
   "info": {
-    "title": "ProviderExample.Api",
-    "version": "v1"
+    "title": "Products API",
+    "version": "1.0.0"
   },
   "paths": {
     "/Products": {
@@ -80,6 +80,36 @@
               }
             }
           },
+          "204": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Products/{int}": {
+      "delete": {
+        "tags": [
+          "Products"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "int",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
           "204": {
             "description": "Success"
           }

@@ -22,7 +22,7 @@ namespace example_bi_directional_provider_dotnet.core
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "ProviderExample.Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Products API", Version = "1.0.0" });
             });
             services.Configure<ConsoleLifetimeOptions>(options =>  // configure the options
                options.SuppressStatusMessages = true);
